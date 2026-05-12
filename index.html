@@ -1,0 +1,1669 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ريما منقذ | Reema Monkiez - Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio of Reema Monkiez - Syrian Digital Creator, Marketer, Designer, and Media Personality."
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="ريما منقذ | Reema Monkiez - Digital Portfolio" />
+    <meta property="og:image" content="https://www.genspark.ai/api/files/s/2zMiJSA3" />
+    <link rel="icon" href="https://www.genspark.ai/api/files/s/2zMiJSA3" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@300;400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              forest: { primary: '#054239', mid: '#428177', deep: '#002623' },
+              wheat: { light: '#edebe0', gold: '#b9a779', dark: '#988561' },
+              umber: { red: '#6b1f2a', deep: '#4a151e' },
+              charcoal: { DEFAULT: '#161616', mid: '#3d3a3b' },
+            },
+            fontFamily: {
+              tajawal: ['Tajawal', 'sans-serif'],
+              cairo: ['Cairo', 'sans-serif'],
+              playfair: ['Playfair Display', 'serif'],
+              inter: ['Inter', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      :root {
+        --forest-primary: #054239;
+        --forest-mid: #428177;
+        --forest-deep: #002623;
+        --wheat-light: #edebe0;
+        --wheat-gold: #b9a779;
+        --wheat-dark: #988561;
+        --umber-red: #6b1f2a;
+        --umber-deep: #4a151e;
+        --charcoal: #161616;
+        --charcoal-mid: #3d3a3b;
+        --white: #ffffff;
+      }
+
+      body {
+        background-color: var(--charcoal);
+        color: var(--wheat-light);
+        font-family: 'Tajawal', sans-serif;
+        overflow-x: hidden;
+        transition:
+          background-color 0.3s,
+          color 0.3s;
+      }
+
+      .light body {
+        background-color: var(--white);
+        color: var(--charcoal);
+      }
+
+      .glass-nav {
+        background: rgba(0, 38, 35, 0.7);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(185, 167, 121, 0.3);
+      }
+
+      .light .glass-nav {
+        background: rgba(237, 235, 224, 0.85);
+        border-bottom: 1px solid rgba(5, 66, 57, 0.2);
+      }
+
+      .glass-card {
+        background: rgba(22, 22, 22, 0.6);
+        backdrop-filter: blur(16px);
+        border: 1px solid rgba(185, 167, 121, 0.2);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      }
+
+      .light .glass-card {
+        background: rgba(255, 255, 255, 0.7);
+        border: 1px solid rgba(5, 66, 57, 0.2);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+      }
+
+      .text-gradient-gold {
+        background: linear-gradient(to right, var(--wheat-light), var(--wheat-gold));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .light .text-gradient-gold {
+        background: linear-gradient(to right, var(--forest-primary), var(--wheat-dark));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .hero-gradient {
+        background: radial-gradient(circle at top left, var(--forest-deep), var(--forest-primary), var(--charcoal));
+      }
+
+      .light .hero-gradient {
+        background: radial-gradient(circle at top left, var(--wheat-light), var(--white), var(--wheat-light));
+      }
+
+      #scroll-progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 3px;
+        background: linear-gradient(to right, var(--wheat-gold), var(--wheat-dark));
+        width: 0%;
+        z-index: 1000;
+      }
+
+      .masonry {
+        column-count: 1;
+        column-gap: 1rem;
+      }
+      @media (min-width: 640px) {
+        .masonry {
+          column-count: 2;
+        }
+      }
+      @media (min-width: 1024px) {
+        .masonry {
+          column-count: 3;
+        }
+      }
+      @media (min-width: 1280px) {
+        .masonry {
+          column-count: 4;
+        }
+      }
+
+      .masonry-item {
+        break-inside: avoid;
+        margin-bottom: 1rem;
+      }
+
+      .skill-bar-fill {
+        width: 0;
+        transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      #lightbox {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      #lightbox.active {
+        display: flex;
+        opacity: 1;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-15px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+
+      .bento-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        grid-auto-rows: 250px;
+      }
+      .bento-large {
+        grid-column: span 1;
+        grid-row: span 2;
+      }
+      @media (min-width: 1024px) {
+        .bento-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .bento-large {
+          grid-column: span 2;
+        }
+      }
+
+      .timeline-dot {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: var(--wheat-gold);
+        border: 4px solid var(--forest-deep);
+        box-shadow: 0 0 10px var(--wheat-gold);
+      }
+      @media (max-width: 768px) {
+        .timeline-dot {
+          left: 0;
+          transform: translateX(-50%);
+        }
+      }
+    </style>
+  </head>
+  <body class="antialiased">
+    <div id="scroll-progress"></div>
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <div class="flex items-center gap-4">
+            <img
+              src="https://www.genspark.ai/api/files/s/2zMiJSA3"
+              alt="Logo"
+              class="w-12 h-12 rounded-full border-2 border-wheat-gold"
+            />
+            <span
+              class="text-xl font-bold font-tajawal text-wheat-light dark:text-wheat-light light:text-forest-deep"
+              data-ar="ريما منقذ"
+              data-en="Reema Monkiez"
+              >ريما منقذ</span
+            >
+          </div>
+
+          <div class="hidden lg:flex space-x-6 space-x-reverse items-center">
+            <a href="#about" class="hover:text-wheat-gold transition" data-ar="عني" data-en="About">عني</a>
+            <a href="#heritage" class="hover:text-wheat-gold transition" data-ar="الهوية" data-en="Heritage">الهوية</a>
+            <a href="#awards" class="hover:text-wheat-gold transition" data-ar="الإنجاز" data-en="Awards">الإنجاز</a>
+            <a href="#skills" class="hover:text-wheat-gold transition" data-ar="المهارات" data-en="Skills">المهارات</a>
+            <a href="#experience" class="hover:text-wheat-gold transition" data-ar="الخبرة" data-en="Experience"
+              >الخبرة</a
+            >
+            <a href="#uxui" class="hover:text-wheat-gold transition" data-ar="UX/UI" data-en="UX/UI">UX/UI</a>
+            <a href="#davinci" class="hover:text-wheat-gold transition" data-ar="دافنشي" data-en="Da Vinci">دافنشي</a>
+            <a href="#academic" class="hover:text-wheat-gold transition" data-ar="الأكاديمي" data-en="Academic"
+              >الأكاديمي</a
+            >
+            <a href="#contact" class="hover:text-wheat-gold transition" data-ar="تواصل" data-en="Contact">تواصل</a>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <button
+              onclick="toggleLang()"
+              class="px-3 py-1 border border-wheat-gold rounded text-sm hover:bg-wheat-gold hover:text-charcoal transition"
+              id="lang-btn"
+            >
+              EN
+            </button>
+            <button onclick="toggleTheme()" class="text-wheat-gold hover:text-wheat-light transition">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center hero-gradient pt-20 overflow-hidden">
+      <div class="absolute inset-0 opacity-30 pointer-events-none">
+        <div class="absolute top-1/4 left-1/4 w-2 h-2 bg-wheat-gold rounded-full animate-float"></div>
+        <div
+          class="absolute top-1/3 right-1/4 w-3 h-3 bg-forest-mid rounded-full animate-float"
+          style="animation-delay: 1s"
+        ></div>
+        <div
+          class="absolute bottom-1/4 left-1/3 w-2 h-2 bg-wheat-light rounded-full animate-float"
+          style="animation-delay: 2s"
+        ></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid lg:grid-cols-2 gap-12 items-center relative z-10">
+        <div class="order-2 lg:order-1 text-center lg:text-start" data-aos="fade-up">
+          <span
+            class="inline-block px-4 py-1 border border-wheat-gold rounded-full text-xs font-bold tracking-widest text-wheat-gold mb-6 uppercase"
+            data-ar="مبدعة رقمية • مسوقة • مصورة"
+            data-en="Digital Creator • Marketer • Photographer"
+            >مبدعة رقمية • مسوقة • مصورة</span
+          >
+
+          <h1
+            class="text-6xl lg:text-8xl font-black mb-4 text-gradient-gold"
+            data-ar="ريما منقذ"
+            data-en="Reema Monkiez"
+          >
+            ريما منقذ
+          </h1>
+          <h2
+            class="text-2xl lg:text-3xl font-playfair italic mb-6 text-wheat-dark"
+            data-ar="Reema Monkiez"
+            data-en="Creative Director"
+          >
+            Reema Monkiez
+          </h2>
+
+          <p
+            class="text-lg lg:text-xl text-gray-300 dark:text-gray-300 light:text-gray-700 mb-8 max-w-lg mx-auto lg:mx-0"
+            data-ar="صياغة التميز الإبداعي السوري الحديث من خلال التسويق وبناء العلامات التجارية والسرد القصصي."
+            data-en="Crafting modern Syrian creative excellence through marketing, branding, and storytelling."
+          >
+            صياغة التميز الإبداعي السوري الحديث من خلال التسويق وبناء العلامات التجارية والسرد القصصي.
+          </p>
+
+          <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
+            <a
+              href="#contact"
+              class="px-8 py-3 bg-forest-primary text-wheat-light border border-wheat-gold rounded-lg hover:bg-wheat-gold hover:text-charcoal transition-all shadow-lg hover:shadow-wheat-gold/50"
+              data-ar="تواصل معي"
+              data-en="Contact Me"
+              >تواصل معي</a
+            >
+            <a
+              href="#uxui"
+              class="px-8 py-3 bg-transparent text-wheat-gold border border-wheat-gold rounded-lg hover:bg-forest-deep transition-all"
+              data-ar="شاهد أعمالي"
+              data-en="View Portfolio"
+              >شاهد أعمالي</a
+            >
+          </div>
+        </div>
+
+        <div class="order-1 lg:order-2 flex justify-center relative" data-aos="zoom-in" data-aos-duration="1500">
+          <div class="absolute top-0 right-0 animate-float z-20 hidden md:block">
+            <svg viewBox="0 0 900 600" class="w-16 h-12 shadow-lg border border-white/20 rounded">
+              <rect width="900" height="200" fill="#007A3D" />
+              <rect y="200" width="900" height="200" fill="#FFFFFF" />
+              <rect y="400" width="900" height="200" fill="#000000" />
+              <path
+                fill="#CE1126"
+                d="M 250,230 L 270,290 L 330,290 L 280,330 L 300,390 L 250,350 L 200,390 L 220,330 L 170,290 L 230,290 Z"
+              />
+              <path
+                fill="#CE1126"
+                d="M 450,230 L 470,290 L 530,290 L 480,330 L 500,390 L 450,350 L 400,390 L 420,330 L 370,290 L 430,290 Z"
+              />
+              <path
+                fill="#CE1126"
+                d="M 650,230 L 670,290 L 730,290 L 680,330 L 700,390 L 650,350 L 600,390 L 620,330 L 570,290 L 630,290 Z"
+              />
+            </svg>
+          </div>
+
+          <div class="relative w-64 h-64 lg:w-96 lg:h-96">
+            <div
+              class="absolute inset-0 rounded-full border-4 border-wheat-gold/30 animate-ping"
+              style="animation-duration: 3s"
+            ></div>
+            <img
+              src="https://www.genspark.ai/api/files/s/2zMiJSA3"
+              alt="Reema Monkiez"
+              class="w-full h-full object-cover rounded-full border-4 border-wheat-gold shadow-[0_0_50px_rgba(185,167,121,0.4)]"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 relative z-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2
+          class="text-4xl font-bold mb-12 text-center text-gradient-gold"
+          data-ar="عنّي • About Me"
+          data-en="About Me"
+        >
+          عنّي • About Me
+        </h2>
+
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div data-aos="fade-left">
+            <p class="text-lg leading-relaxed text-gray-300 dark:text-gray-300 light:text-gray-800 mb-6">
+              <span data-ar="أهلاً، أنا " data-en="Hi, I'm ">أهلاً، أنا </span>
+              <span
+                class="font-bold text-wheat-gold"
+                style="
+                  background: linear-gradient(to right, #b9a779, #988561);
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                "
+                data-ar="ريما منقذ"
+                data-en="Reema Monkiez"
+                >ريما منقذ</span
+              >
+              <span
+                data-ar="، طالبة في تخصص نظم المعلومات الإدارية بجامعة الملك عبدالعزيز. أمتلك خبرة في مجال التسويق لمدة تزيد عن خمس سنوات، وأعمل حالياً كصانعة محتوى تعليمي مجاني وصل إلى ملايين الطلاب في مجالات القدرات والتحصيلي والمرحلة الجامعية. كما أدير مجتمعات على منصة التليجرام تهتم بمجال القدرات والتحصيلي والهاكثونات بالمملكة."
+                data-en=" — a Management Information Systems student at King Abdulaziz University. With over 5 years of marketing experience, I'm currently a free educational content creator reaching millions of students across Qudurat, Tahseeli, and university-level subjects. I also lead active Telegram communities focused on aptitude tests, achievement tests, and hackathons across the Kingdom."
+                >، طالبة في تخصص نظم المعلومات الإدارية بجامعة الملك عبدالعزيز. أمتلك خبرة في مجال التسويق لمدة تزيد عن
+                خمس سنوات، وأعمل حالياً كصانعة محتوى تعليمي مجاني وصل إلى ملايين الطلاب في مجالات القدرات والتحصيلي
+                والمرحلة الجامعية. كما أدير مجتمعات على منصة التليجرام تهتم بمجال القدرات والتحصيلي والهاكثونات
+                بالمملكة.</span
+              >
+            </p>
+          </div>
+
+          <div class="glass-card p-8 rounded-2xl border-wheat-gold/50 relative overflow-hidden" data-aos="fade-right">
+            <div class="absolute -right-10 -top-10 w-40 h-40 bg-forest-mid rounded-full blur-3xl opacity-20"></div>
+            <div class="space-y-6 relative z-10">
+              <div class="flex items-center gap-4 border-b border-white/10 pb-4">
+                <span class="text-4xl text-wheat-gold font-bold">300K+</span>
+                <span class="text-lg" data-ar="مشترك يوتيوب" data-en="YouTube Subs">مشترك يوتيوب</span>
+              </div>
+              <div class="flex items-center gap-4 border-b border-white/10 pb-4">
+                <span class="text-4xl text-wheat-gold font-bold">120K+</span>
+                <span class="text-lg" data-ar="متابع تيك توك" data-en="TikTok Followers">متابع تيك توك</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <span class="text-4xl text-wheat-gold font-bold">🏆</span>
+                <span class="text-lg" data-ar="المركز الأول - هاكاثون" data-en="1st Place Hackathon"
+                  >المركز الأول - هاكاثون</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Syrian Heritage Banner -->
+    <section
+      id="heritage"
+      class="relative min-h-[80vh] flex items-center justify-center bg-fixed bg-center bg-cover"
+      style="background-image: url('https://www.genspark.ai/api/files/s/6fumMbFC')"
+    >
+      <div class="absolute inset-0 bg-gradient-to-b from-forest-deep/90 via-forest-deep/60 to-forest-deep/90"></div>
+      <div class="relative z-10 text-center px-4" data-aos="zoom-in">
+        <h2
+          class="text-6xl md:text-8xl font-black text-gradient-gold mb-4"
+          data-ar="هويتي السورية"
+          data-en="Syrian Heritage"
+        >
+          هويتي السورية
+        </h2>
+        <h3
+          class="text-2xl md:text-4xl font-playfair italic text-wheat-light mb-8"
+          data-ar="My Syrian Heritage"
+          data-en="My Roots"
+        >
+          My Syrian Heritage
+        </h3>
+        <p
+          class="text-xl md:text-2xl text-white max-w-3xl mx-auto leading-relaxed drop-shadow-lg"
+          data-ar="أحمل جذوري السورية بفخر، وأمزجها مع رؤية حديثة لإبداع رقمي عالمي المستوى."
+          data-en="I carry my Syrian roots with pride, blending them with a modern vision for world-class digital creativity."
+        >
+          أحمل جذوري السورية بفخر، وأمزجها مع رؤية حديثة لإبداع رقمي عالمي المستوى.
+        </p>
+      </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section id="awards" class="py-24 relative overflow-hidden bg-forest-deep light:bg-wheat-light/30">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2
+            class="text-5xl md:text-6xl font-bold mb-4 text-gradient-gold"
+            data-ar="🏆 الإنجاز الأكبر • Major Achievement"
+            data-en="🏆 Major Achievement"
+          >
+            🏆 الإنجاز الأكبر • Major Achievement
+          </h2>
+          <h3
+            class="text-2xl md:text-3xl text-wheat-light mb-2"
+            data-ar="الفائزة بالمركز الأول — هاكاثون KDU-THON التعليمي"
+            data-en="First Place Winner — KDU-THON Education Hackathon"
+          >
+            الفائزة بالمركز الأول — هاكاثون KDU-THON التعليمي
+          </h3>
+          <p
+            class="text-lg text-gray-400"
+            data-ar="جامعة الأميرة نورة بنت عبدالرحمن • +15,000 مشارك • نوفمبر 2024"
+            data-en="Princess Nourah University • 15,000+ Participants • Nov 2024"
+          >
+            جامعة الأميرة نورة بنت عبدالرحمن • +15,000 مشارك • نوفمبر 2024
+          </p>
+        </div>
+
+        <div
+          class="glass-card rounded-3xl p-8 lg:p-12 border-2 border-wheat-gold shadow-[0_0_40px_rgba(185,167,121,0.2)] mb-12"
+          data-aos="fade-up"
+        >
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 text-center border-b border-white/10 pb-12">
+            <div>
+              <div class="text-5xl font-black text-wheat-gold mb-2 counter" data-target="1">0</div>
+              <div class="text-xl" data-ar="المركز الأول" data-en="1st Place">المركز الأول</div>
+            </div>
+            <div>
+              <div class="text-5xl font-black text-wheat-gold mb-2 counter" data-target="15000">0</div>
+              <div class="text-xl" data-ar="مشارك خليجي" data-en="Participants">مشارك خليجي</div>
+            </div>
+            <div>
+              <div class="text-5xl font-black text-wheat-gold mb-2 counter" data-target="10000">0</div>
+              <div class="text-xl" data-ar="ريال الجائزة" data-en="SAR Prize">ريال الجائزة</div>
+            </div>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-8 mb-12">
+            <div class="rounded-2xl overflow-hidden border border-wheat-gold/50 group relative">
+              <img
+                src="https://www.genspark.ai/api/files/s/OkfpTldf"
+                loading="lazy"
+                alt="Team winning"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            </div>
+            <div class="rounded-2xl overflow-hidden border border-wheat-gold/50 group relative">
+              <img
+                src="https://www.genspark.ai/api/files/s/Kl6jygv0"
+                loading="lazy"
+                alt="Cheque"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            </div>
+          </div>
+
+          <div class="bg-forest-primary/50 rounded-2xl p-8 border border-wheat-gold/30 text-center">
+            <h4
+              class="text-3xl font-bold text-wheat-gold mb-4"
+              data-ar="مشروع تحدّث | Tahaddath"
+              data-en="Tahaddath Project"
+            >
+              مشروع تحدّث | Tahaddath
+            </h4>
+            <p
+              class="text-lg mb-8 max-w-4xl mx-auto"
+              data-ar="تطبيق يعمل بالذكاء الاصطناعي لمساعدة الأفراد في التغلب على القلق الاجتماعي، الخوف من التحدث أمام الجمهور، وتوتر مقابلات العمل عبر ممارسة صوتية وتحليلات أداء."
+              data-en="An AI-powered application helping individuals overcome social anxiety, public speaking fear, presentation stress, and job interview anxiety through voice-based AI practice."
+            >
+              تطبيق يعمل بالذكاء الاصطناعي لمساعدة الأفراد في التغلب على القلق الاجتماعي، الخوف من التحدث أمام الجمهور،
+              وتوتر مقابلات العمل عبر ممارسة صوتية وتحليلات أداء.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-6 text-start">
+              <div class="bg-black/30 p-6 rounded-xl border border-white/10">
+                <h5 class="text-xl font-bold text-wheat-light mb-2">
+                  🎤 <span data-ar="الطبيب الافتراضي" data-en="Virtual Doctor">الطبيب الافتراضي</span>
+                </h5>
+                <p
+                  class="text-sm text-gray-300"
+                  data-ar="ممارسة العروض التقديمية مع تقارير أداء تفصيلية واقتراحات تحسين من الذكاء الاصطناعي."
+                  data-en="Practice presentations with AI voice interaction, receive performance analysis and feedback."
+                >
+                  ممارسة العروض التقديمية مع تقارير أداء تفصيلية واقتراحات تحسين من الذكاء الاصطناعي.
+                </p>
+              </div>
+              <div class="bg-black/30 p-6 rounded-xl border border-white/10">
+                <h5 class="text-xl font-bold text-wheat-light mb-2">
+                  💼 <span data-ar="المدير الافتراضي" data-en="Virtual Manager">المدير الافتراضي</span>
+                </h5>
+                <p
+                  class="text-sm text-gray-300"
+                  data-ar="محاكاة مقابلات العمل الحقيقية مع تقييم وتسجيل الأداء وتحليل نقاط القوة والضعف."
+                  data-en="Simulate job interviews with AI, get evaluation reports and strengths/weaknesses analysis."
+                >
+                  محاكاة مقابلات العمل الحقيقية مع تقييم وتسجيل الأداء وتحليل نقاط القوة والضعف.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mazrooa Sub-section -->
+        <div class="text-center mb-8 mt-16" data-aos="fade-up">
+          <h3
+            class="text-3xl font-bold text-[#cd7f32] mb-2"
+            data-ar="🥉 إنجاز إضافي • Additional Achievement"
+            data-en="🥉 Additional Achievement"
+          >
+            🥉 إنجاز إضافي • Additional Achievement
+          </h3>
+        </div>
+        <div
+          class="glass-card rounded-2xl overflow-hidden border-[3px] border-[#cd7f32] relative group"
+          style="background: linear-gradient(135deg, rgba(205, 127, 50, 0.1), rgba(5, 66, 57, 0.3))"
+          data-aos="fade-up"
+        >
+          <div class="grid lg:grid-cols-2 items-center">
+            <div
+              class="cursor-pointer overflow-hidden h-full"
+              onclick="openLightbox('https://www.genspark.ai/api/files/s/9uDHNgSj')"
+            >
+              <img
+                src="https://www.genspark.ai/api/files/s/9uDHNgSj"
+                loading="lazy"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                alt="Mazrooa"
+              />
+            </div>
+            <div class="p-8 lg:p-12">
+              <div class="text-5xl mb-4">🥉</div>
+              <h4
+                class="text-3xl font-bold text-[#cd7f32] mb-2"
+                data-ar="المركز الثالث — معسكر العرض التجاري"
+                data-en="3rd Place — Business Pitch Camp"
+              >
+                المركز الثالث — معسكر العرض التجاري
+              </h4>
+              <h5
+                class="text-xl font-bold text-wheat-light mb-4"
+                data-ar="مشروع: مزروع | Mazrooa"
+                data-en="Project: Mazrooa"
+              >
+                مشروع: مزروع | Mazrooa
+              </h5>
+              <div
+                class="text-sm text-gray-300 mb-6"
+                data-ar="جامعة الملك عبدالعزيز • يوليو ٢٠٢٤"
+                data-en="King Abdulaziz University • July 2024"
+              >
+                جامعة الملك عبدالعزيز • يوليو ٢٠٢٤
+              </div>
+              <p
+                class="text-lg leading-relaxed text-gray-200"
+                data-ar="فوز مشروع 'مزروع' بالمركز الثالث في معسكر العرض التجاري المقام في جامعة الملك عبدالعزيز ضمن نادي رواد الأعمال."
+                data-en="Winning 3rd Place with the 'Mazrooa' project at the Business Pitch Camp held at King Abdulaziz University, organized by the Entrepreneurship Club."
+              >
+                فوز مشروع 'مزروع' بالمركز الثالث في معسكر العرض التجاري المقام في جامعة الملك عبدالعزيز ضمن نادي رواد
+                الأعمال.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 bg-charcoal-mid light:bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2
+          class="text-4xl font-bold mb-16 text-center text-gradient-gold"
+          data-ar="المهارات والخبرات • Skills"
+          data-en="Skills & Expertise"
+        >
+          المهارات والخبرات • Skills
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <script>
+            const skills = [
+              { ar: 'التسويق', en: 'Marketing', p: 95 },
+              { ar: 'بناء العلامة', en: 'Branding', p: 92 },
+              { ar: 'التصوير', en: 'Photography', p: 90 },
+              { ar: 'التصميم الرقمي', en: 'Digital Design', p: 93 },
+              { ar: 'تحرير الفيديو', en: 'Video Editing', p: 88 },
+              { ar: 'إدارة السوشيال ميديا', en: 'Social Media', p: 96 },
+              { ar: 'صناعة المحتوى', en: 'Content Creation', p: 95 },
+              { ar: 'إدارة الحسابات', en: 'Account Management', p: 85 },
+              { ar: 'الإعلانات الرقمية', en: 'Digital Ads', p: 90 },
+              { ar: 'تصميم UI/UX', en: 'UI/UX Design', p: 82 },
+              { ar: 'التوجيه الإبداعي', en: 'Creative Direction', p: 91 },
+              { ar: 'الإنتاج الإعلامي', en: 'Media Production', p: 89 },
+            ];
+            skills.forEach((s, i) => {
+              document.write(`
+                <div class="glass-card p-6 rounded-xl" data-aos="fade-up" data-aos-delay="${i * 50}">
+                  <div class="flex justify-between mb-2">
+                    <span class="font-bold text-wheat-light" data-ar="${s.ar}" data-en="${s.en}">${s.ar}</span>
+                    <span class="text-wheat-gold font-mono">${s.p}%</span>
+                  </div>
+                  <div class="w-full h-2 bg-charcoal rounded-full overflow-hidden">
+                    <div class="skill-bar-fill h-full bg-gradient-to-r from-forest-mid to-wheat-gold" data-width="${s.p}%"></div>
+                  </div>
+                </div>
+              `);
+            });
+          </script>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Timeline Section -->
+    <section id="experience" class="py-24 relative overflow-hidden bg-forest-deep">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <h2
+          class="text-4xl font-bold mb-16 text-center text-gradient-gold"
+          data-ar="الخبرات المهنية • Professional Experience"
+          data-en="Professional Experience"
+        >
+          الخبرات المهنية • Professional Experience
+        </h2>
+
+        <div class="relative">
+          <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 bg-wheat-gold/30 h-full"></div>
+          <div class="md:hidden absolute left-0 transform -translate-x-1/2 w-1 bg-wheat-gold/30 h-full"></div>
+
+          <!-- Item 1 -->
+          <div
+            class="mb-12 relative flex flex-col md:flex-row items-center md:justify-between w-full"
+            data-aos="fade-up"
+          >
+            <div class="w-full md:w-5/12 order-2 md:order-1 flex justify-end">
+              <div
+                class="glass-card p-6 rounded-xl border-r-4 md:border-l-4 md:border-r-0 border-forest-primary w-full shadow-lg relative ml-6 md:ml-0 md:mr-6"
+              >
+                <div class="flex justify-between items-start mb-2">
+                  <h3 class="text-2xl font-bold text-wheat-gold">Social Media Specialist — Leen</h3>
+                  <span
+                    class="px-3 py-1 bg-green-500/20 border border-green-400 text-green-300 rounded-full text-xs animate-pulse"
+                    data-ar="حالياً"
+                    data-en="Current"
+                    >حالياً</span
+                  >
+                </div>
+                <p class="text-sm text-gray-300 mb-1" data-ar="تعاقد · عمل عن بُعد" data-en="Contract · Remote">
+                  تعاقد · عمل عن بُعد
+                </p>
+                <p
+                  class="text-sm text-gray-400 mb-4"
+                  data-ar="مايو ٢٠٢٢ – حتى الآن · ٤ سنوات وشهر | مكة، جدة، السعودية"
+                  data-en="May 2022 – Present · 4 yrs 1 mo | Makkah, Jeddah, Saudi Arabia"
+                >
+                  مايو ٢٠٢٢ – حتى الآن · ٤ سنوات وشهر | مكة، جدة، السعودية
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-2 py-1 bg-wheat-gold/10 border border-wheat-gold/30 text-wheat-gold rounded text-xs"
+                    data-ar="إدارة الحسابات"
+                    data-en="Account Mgmt"
+                    >إدارة الحسابات</span
+                  >
+                  <span
+                    class="px-2 py-1 bg-wheat-gold/10 border border-wheat-gold/30 text-wheat-gold rounded text-xs"
+                    data-ar="التسويق"
+                    data-en="Marketing"
+                    >التسويق</span
+                  >
+                  <span
+                    class="px-2 py-1 bg-wheat-gold/10 border border-wheat-gold/30 text-wheat-gold rounded text-xs"
+                    data-ar="التصوير"
+                    data-en="Photography"
+                    >التصوير</span
+                  >
+                  <span
+                    class="px-2 py-1 bg-wheat-gold/10 border border-wheat-gold/30 text-wheat-gold rounded text-xs"
+                    data-ar="المونتاج"
+                    data-en="Editing"
+                    >المونتاج</span
+                  >
+                  <span
+                    class="px-2 py-1 bg-wheat-gold/10 border border-wheat-gold/30 text-wheat-gold rounded text-xs"
+                    data-ar="السوشيال ميديا"
+                    data-en="Social Media"
+                    >السوشيال ميديا</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="timeline-dot top-8"></div>
+            <div class="w-full md:w-5/12 order-1 md:order-2"></div>
+          </div>
+
+          <!-- Item 2 -->
+          <div
+            class="mb-12 relative flex flex-col md:flex-row items-center md:justify-between w-full"
+            data-aos="fade-up"
+          >
+            <div class="w-full md:w-5/12 order-2 md:order-1"></div>
+            <div class="timeline-dot top-8"></div>
+            <div class="w-full md:w-5/12 order-1 md:order-2 flex justify-start">
+              <div
+                class="glass-card p-6 rounded-xl border-l-4 border-forest-primary w-full shadow-lg relative ml-6 md:ml-6"
+              >
+                <h3 class="text-2xl font-bold text-wheat-gold mb-2">Newsletter Writer — Ulom</h3>
+                <p class="text-sm text-gray-300 mb-1" data-ar="دوام جزئي · عمل عن بُعد" data-en="Part-time · Remote">
+                  دوام جزئي · عمل عن بُعد
+                </p>
+                <p
+                  class="text-sm text-gray-400 mb-4"
+                  data-ar="يونيو ٢٠٢٥ – حتى الآن · سنة واحدة"
+                  data-en="June 2025 – Present · 1 yr"
+                >
+                  يونيو ٢٠٢٥ – حتى الآن · سنة واحدة
+                </p>
+                <p
+                  class="text-sm text-gray-200 mb-4 leading-relaxed"
+                  data-ar="جمعية علوم للبحث والتطوير — تنسيق وتسليط الضوء على أبرز الأخبار للطلاب الموهوبين والباحثين، صياغتها في نشرة وإرسالها عبر البريد."
+                  data-en="The Association for Ulom Research and Development — curating and highlighting the most relevant news for talented students and researchers, crafted into a newsletter and shared via email."
+                >
+                  جمعية علوم للبحث والتطوير — تنسيق وتسليط الضوء على أبرز الأخبار للطلاب الموهوبين والباحثين، صياغتها في
+                  نشرة وإرسالها عبر البريد.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-2 py-1 bg-wheat-gold/10 border border-wheat-gold/30 text-wheat-gold rounded text-xs"
+                    data-ar="كتابة الأخبار"
+                    data-en="News Writing"
+                    >كتابة الأخبار</span
+                  >
+                  <span
+                    class="px-2 py-1 bg-wheat-gold/10 border border-wheat-gold/30 text-wheat-gold rounded text-xs"
+                    data-ar="كتابة المحتوى"
+                    data-en="Content Writing"
+                    >كتابة المحتوى</span
+                  >
+                  <span
+                    class="px-2 py-1 bg-wheat-gold/10 border border-wheat-gold/30 text-wheat-gold rounded text-xs"
+                    data-ar="جمع البيانات"
+                    data-en="Data Collection"
+                    >جمع البيانات</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div
+            class="mb-12 relative flex flex-col md:flex-row items-center md:justify-between w-full"
+            data-aos="fade-up"
+          >
+            <div class="w-full md:w-5/12 order-2 md:order-1 flex justify-end">
+              <div
+                class="glass-card p-6 rounded-xl border-r-4 md:border-l-4 md:border-r-0 border-forest-primary w-full shadow-lg relative ml-6 md:ml-0 md:mr-6"
+              >
+                <h3 class="text-2xl font-bold text-wheat-gold mb-2">Social Media Manager — Microsoft Club</h3>
+                <p class="text-sm text-gray-300 mb-1" data-ar="تدريب" data-en="Internship">تدريب</p>
+                <p
+                  class="text-sm text-gray-400 mb-4"
+                  data-ar="يونيو ٢٠٢٤ – حتى الآن · سنتان | مكة، جدة، السعودية"
+                  data-en="June 2024 – Present · 2 yrs | Makkah, Jeddah, Saudi Arabia"
+                >
+                  يونيو ٢٠٢٤ – حتى الآن · سنتان | مكة، جدة، السعودية
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-2 py-1 bg-wheat-gold/10 border border-wheat-gold/30 text-wheat-gold rounded text-xs"
+                    data-ar="التصميم"
+                    data-en="Design"
+                    >التصميم</span
+                  >
+                  <span
+                    class="px-2 py-1 bg-wheat-gold/10 border border-wheat-gold/30 text-wheat-gold rounded text-xs"
+                    data-ar="البحث والتطوير"
+                    data-en="R&D"
+                    >البحث والتطوير</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="timeline-dot top-8"></div>
+            <div class="w-full md:w-5/12 order-1 md:order-2"></div>
+          </div>
+
+          <!-- Item 4 -->
+          <div
+            class="mb-12 relative flex flex-col md:flex-row items-center md:justify-between w-full"
+            data-aos="fade-up"
+          >
+            <div class="w-full md:w-5/12 order-2 md:order-1"></div>
+            <div class="timeline-dot top-8"></div>
+            <div class="w-full md:w-5/12 order-1 md:order-2 flex justify-start">
+              <div
+                class="glass-card p-6 rounded-xl border-l-4 border-forest-primary w-full shadow-lg relative ml-6 md:ml-6"
+              >
+                <h3 class="text-2xl font-bold text-wheat-gold mb-2">Social Media Specialist — AL Baraah</h3>
+                <p class="text-sm text-gray-300 mb-1" data-ar="تعاقد" data-en="Contract">تعاقد</p>
+                <p
+                  class="text-sm text-gray-400 mb-4"
+                  data-ar="أكتوبر ٢٠٢١ – نوفمبر ٢٠٢٤ · ٣ سنوات و٢ شهر"
+                  data-en="Oct 2021 – Nov 2024 · 3 yrs 2 mo"
+                >
+                  أكتوبر ٢٠٢١ – نوفمبر ٢٠٢٤ · ٣ سنوات و٢ شهر
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-2 py-1 bg-wheat-gold/10 border border-wheat-gold/30 text-wheat-gold rounded text-xs"
+                    data-ar="التصميم"
+                    data-en="Design"
+                    >التصميم</span
+                  >
+                  <span
+                    class="px-2 py-1 bg-wheat-gold/10 border border-wheat-gold/30 text-wheat-gold rounded text-xs"
+                    data-ar="التصوير"
+                    data-en="Photography"
+                    >التصوير</span
+                  >
+                  <span
+                    class="px-2 py-1 bg-wheat-gold/10 border border-wheat-gold/30 text-wheat-gold rounded text-xs"
+                    data-ar="المونتاج"
+                    data-en="Editing"
+                    >المونتاج</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UX/UI Work Section -->
+    <section id="uxui" class="py-24 bg-charcoal-mid light:bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2
+          class="text-4xl font-bold mb-16 text-center text-gradient-gold"
+          data-ar="أعمالي UX/UI • My UX/UI Work"
+          data-en="My UX/UI Work"
+        >
+          أعمالي UX/UI • My UX/UI Work
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="glass-card rounded-2xl overflow-hidden border-[3px] border-wheat-gold/50 hover:border-wheat-gold transition duration-300 group shadow-lg hover:shadow-[0_0_25px_rgba(185,167,121,0.3)]"
+            data-aos="fade-up"
+          >
+            <div
+              class="relative h-72 cursor-pointer overflow-hidden"
+              onclick="openLightbox('https://www.genspark.ai/api/files/s/ox0lfJrw')"
+            >
+              <img
+                src="https://www.genspark.ai/api/files/s/ox0lfJrw"
+                loading="lazy"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                alt="Plants Search App"
+              />
+              <div
+                class="absolute top-4 left-4 bg-wheat-gold text-charcoal px-3 py-1 rounded-full text-xs font-bold uppercase shadow-lg"
+              >
+                UX/UI Design
+              </div>
+            </div>
+            <div class="p-6">
+              <h3
+                class="text-2xl font-bold text-gradient-gold mb-3"
+                data-ar="تطبيق البحث عن النباتات"
+                data-en="Plants Search App"
+              >
+                تطبيق البحث عن النباتات
+              </h3>
+              <p
+                class="text-gray-300 text-sm leading-relaxed"
+                data-ar="تصميم تجربة مستخدم لتطبيق متاجر النباتات يعرض شبكة منتجات أنيقة مع نتائج بحث ديناميكية وبطاقات منتج تفاعلية."
+                data-en="UX/UI design for a plant store mobile app featuring elegant product grid, dynamic search results, and interactive product cards."
+              >
+                تصميم تجربة مستخدم لتطبيق متاجر النباتات يعرض شبكة منتجات أنيقة مع نتائج بحث ديناميكية وبطاقات منتج
+                تفاعلية.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="glass-card rounded-2xl overflow-hidden border-[3px] border-wheat-gold/50 hover:border-wheat-gold transition duration-300 group shadow-lg hover:shadow-[0_0_25px_rgba(185,167,121,0.3)]"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div
+              class="relative h-72 cursor-pointer overflow-hidden"
+              onclick="openLightbox('https://www.genspark.ai/api/files/s/nJpzmGaL')"
+            >
+              <img
+                src="https://www.genspark.ai/api/files/s/nJpzmGaL"
+                loading="lazy"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                alt="Burger App"
+              />
+              <div
+                class="absolute top-4 left-4 bg-wheat-gold text-charcoal px-3 py-1 rounded-full text-xs font-bold uppercase shadow-lg"
+              >
+                UX/UI Design
+              </div>
+            </div>
+            <div class="p-6">
+              <h3
+                class="text-2xl font-bold text-gradient-gold mb-3"
+                data-ar="إعادة تصميم تطبيق طلب البرغر"
+                data-en="Burger Ordering App Redesign"
+              >
+                إعادة تصميم تطبيق طلب البرغر
+              </h3>
+              <p
+                class="text-gray-300 text-sm leading-relaxed"
+                data-ar="إعادة تصميم احترافية لتطبيق طلب الطعام — مقارنة بين التصميم الأصلي والتصميم الجديد مع تحسينات في التايبوغرافي والتسلسل البصري وتجربة المستخدم."
+                data-en="Professional redesign of a food ordering app — original vs my design comparison with improved typography, visual hierarchy, and UX."
+              >
+                إعادة تصميم احترافية لتطبيق طلب الطعام — مقارنة بين التصميم الأصلي والتصميم الجديد مع تحسينات في
+                التايبوغرافي والتسلسل البصري وتجربة المستخدم.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="glass-card rounded-2xl overflow-hidden border-[3px] border-wheat-gold/50 hover:border-wheat-gold transition duration-300 group shadow-lg hover:shadow-[0_0_25px_rgba(185,167,121,0.3)]"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div
+              class="relative h-72 cursor-pointer overflow-hidden"
+              onclick="openLightbox('https://www.genspark.ai/api/files/s/A8gnWfVS')"
+            >
+              <img
+                src="https://www.genspark.ai/api/files/s/A8gnWfVS"
+                loading="lazy"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                alt="Audio Store App"
+              />
+              <div
+                class="absolute top-4 left-4 bg-wheat-gold text-charcoal px-3 py-1 rounded-full text-xs font-bold uppercase shadow-lg"
+              >
+                UX/UI Design
+              </div>
+            </div>
+            <div class="p-6">
+              <h3
+                class="text-2xl font-bold text-gradient-gold mb-3"
+                data-ar="تصميم متجر سماعات"
+                data-en="Audio Store App Redesign"
+              >
+                تصميم متجر سماعات
+              </h3>
+              <p
+                class="text-gray-300 text-sm leading-relaxed"
+                data-ar="تصميم واجهة لمتجر سماعات إلكترونية بألوان ناعمة وتدرج بصري احترافي — قبل وبعد إعادة التصميم."
+                data-en="Audio products e-commerce app redesign with soft pastel palette and improved visual hierarchy — before vs after showcase."
+              >
+                تصميم واجهة لمتجر سماعات إلكترونية بألوان ناعمة وتدرج بصري احترافي — قبل وبعد إعادة التصميم.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reema Da Vinci Art Section -->
+    <section id="davinci" class="py-24 relative bg-forest-deep light:bg-wheat-light/30">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12" data-aos="fade-up">
+          <h2
+            class="text-5xl font-bold mb-4 text-gradient-gold"
+            data-ar="🎨 ريما دافنشي • Reema Da Vinci"
+            data-en="🎨 Reema Da Vinci"
+          >
+            🎨 ريما دافنشي • Reema Da Vinci
+          </h2>
+          <h3
+            class="text-xl text-wheat-light mb-6"
+            data-ar="اللوحات الفنية وأعمال الكروشيه • Paintings & Crochet Art"
+            data-en="Paintings & Crochet Art"
+          >
+            اللوحات الفنية وأعمال الكروشيه • Paintings & Crochet Art
+          </h3>
+          <p
+            class="font-playfair italic text-2xl text-wheat-gold opacity-90 max-w-2xl mx-auto"
+            data-ar="الفن لغة الروح — كل لوحة قصة، وكل غرزة حنين"
+            data-en="Art is the language of the soul — every painting tells a story, every stitch holds a memory."
+          >
+            الفن لغة الروح — كل لوحة قصة، وكل غرزة حنين
+          </p>
+        </div>
+
+        <!-- Featured Piece -->
+        <div class="max-w-3xl mx-auto mb-16" data-aos="zoom-in">
+          <div
+            class="glass-card p-4 rounded-3xl border-[4px] border-wheat-gold shadow-[0_0_50px_rgba(185,167,121,0.4)] relative group cursor-pointer overflow-hidden"
+            onclick="openLightbox('https://www.genspark.ai/api/files/s/z7fynOxV')"
+          >
+            <div
+              class="absolute top-8 right-0 bg-wheat-gold text-charcoal px-6 py-2 rounded-l-full font-bold shadow-lg z-10"
+              data-ar="قطعة ثقافية مميزة"
+              data-en="Featured Cultural Piece"
+            >
+              قطعة ثقافية مميزة
+            </div>
+            <img
+              src="https://www.genspark.ai/api/files/s/z7fynOxV"
+              loading="lazy"
+              class="w-full h-auto rounded-2xl group-hover:scale-105 transition duration-700"
+              alt="Syrian Flag Crochet Art"
+            />
+            <div class="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition duration-300 z-0"></div>
+          </div>
+        </div>
+
+        <!-- Masonry Gallery -->
+        <div class="masonry">
+          <script>
+            const artImgs = [
+              {
+                url: 'https://www.genspark.ai/api/files/s/IvM3HV1I',
+                ar: 'لوحة النخلة الليلية',
+                en: 'Palm Tree Night Painting',
+              },
+              { url: 'https://www.genspark.ai/api/files/s/lChXGuKU', ar: 'حقل دوار الشمس', en: 'Sunflower Field' },
+              { url: 'https://www.genspark.ai/api/files/s/L74YANeK', ar: 'استوديو الرسم', en: 'Art Studio Setup' },
+              {
+                url: 'https://www.genspark.ai/api/files/s/NdP4qh3m',
+                ar: 'لوحة الأقحوان',
+                en: 'Daisy Flowers on Black',
+              },
+              {
+                url: 'https://www.genspark.ai/api/files/s/pSUTLiuS',
+                ar: 'مراحل رسم الأقحوان',
+                en: 'Daisy Painting Process',
+              },
+              { url: 'https://www.genspark.ai/api/files/s/LKDFCXDP', ar: 'شاطئ النخيل', en: 'Tropical Beach Palm' },
+              { url: 'https://www.genspark.ai/api/files/s/ixcofzDH', ar: 'منظر بحري مشمس', en: 'Sunny Seascape' },
+              { url: 'https://www.genspark.ai/api/files/s/a0qLNjWR', ar: 'شجرة الغروب', en: 'Sunset Tree Watercolor' },
+              {
+                url: 'https://www.genspark.ai/api/files/s/yzvDhZdz',
+                ar: 'رسم الزنابق بالقلم',
+                en: 'Lily Flowers Pencil Sketch (Reema 2025)',
+              },
+            ];
+            artImgs.forEach((img, i) => {
+              document.write(`
+                <div class="masonry-item relative rounded-2xl overflow-hidden cursor-pointer border-[2px] border-transparent hover:border-wheat-gold transition-all duration-300 group shadow-md hover:shadow-[0_8px_30px_rgba(185,167,121,0.3)]" onclick="openLightbox('${img.url}')" data-aos="fade-up" data-aos-delay="${(i % 3) * 50}">
+                  <img src="${img.url}" loading="lazy" class="w-full h-auto group-hover:scale-105 transition duration-500" alt="${img.en}" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+                    <span class="text-wheat-light font-bold" data-ar="${img.ar}" data-en="${img.en}">${img.ar}</span>
+                  </div>
+                  <div class="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition duration-300 mix-blend-overlay"></div>
+                </div>
+              `);
+            });
+          </script>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Influence Section -->
+    <section id="influence" class="py-24 bg-charcoal-mid light:bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2
+          class="text-4xl font-bold mb-16 text-gradient-gold"
+          data-ar="التأثير الرقمي • Social Influence"
+          data-en="Social Influence"
+        >
+          التأثير الرقمي • Social Influence
+        </h2>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <a
+            href="https://www.tiktok.com/@reemamnkz"
+            target="_blank"
+            class="glass-card p-8 rounded-2xl group hover:-translate-y-2 transition duration-300 block"
+          >
+            <h3 class="text-2xl font-bold mb-4" data-ar="تيك توك" data-en="TikTok">تيك توك</h3>
+            <div class="text-4xl font-black text-wheat-gold mb-2 counter" data-target="121000">0</div>
+            <div class="text-sm text-gray-400" data-ar="متابع" data-en="Followers">متابع</div>
+          </a>
+          <a
+            href="https://youtube.com/@reemamnkz"
+            target="_blank"
+            class="glass-card p-8 rounded-2xl group hover:-translate-y-2 transition duration-300 block"
+          >
+            <h3 class="text-2xl font-bold mb-4" data-ar="يوتيوب" data-en="YouTube">يوتيوب</h3>
+            <div class="text-4xl font-black text-wheat-gold mb-2 counter" data-target="300000">0</div>
+            <div class="text-sm text-gray-400" data-ar="مشترك" data-en="Subscribers">مشترك</div>
+          </a>
+          <a
+            href="https://x.com/reemamnkz"
+            target="_blank"
+            class="glass-card p-8 rounded-2xl group hover:-translate-y-2 transition duration-300 block"
+          >
+            <h3 class="text-2xl font-bold mb-4" data-ar="منصة إكس" data-en="X Platform">منصة إكس</h3>
+            <div class="text-2xl font-bold text-wheat-gold mt-4" data-ar="مبدعة نشطة" data-en="Active Creator">
+              مبدعة نشطة
+            </div>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/reema-monkiez-699b55324/"
+            target="_blank"
+            class="glass-card p-8 rounded-2xl group hover:-translate-y-2 transition duration-300 block"
+          >
+            <h3 class="text-2xl font-bold mb-4" data-ar="لينكد إن" data-en="LinkedIn">لينكد إن</h3>
+            <div class="text-2xl font-bold text-wheat-gold mt-4" data-ar="شبكة احترافية" data-en="Professional Network">
+              شبكة احترافية
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- YouTube Silver Play Button Milestone -->
+    <section
+      id="youtube-milestone"
+      class="py-24 relative overflow-hidden"
+      style="
+        background:
+          linear-gradient(180deg, rgba(192, 192, 192, 0.1) 0%, rgba(185, 167, 121, 0.2) 100%), var(--forest-deep);
+      "
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2
+            class="text-4xl md:text-5xl font-bold mb-4"
+            style="
+              background: linear-gradient(to right, #ffffff, #c0c0c0, #b9a779);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            "
+            data-ar="🏆 إنجاز يوتيوب • YouTube Silver Play Button"
+            data-en="🏆 YouTube Silver Play Button"
+          >
+            🏆 إنجاز يوتيوب • YouTube Silver Play Button
+          </h2>
+          <p
+            class="text-xl text-wheat-light"
+            data-ar="+300,000 مشترك • 300K+ Subscribers Milestone"
+            data-en="300K+ Subscribers Milestone"
+          >
+            +300,000 مشترك • 300K+ Subscribers Milestone
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-8 mb-12">
+          <div
+            class="glass-card rounded-2xl overflow-hidden border-2 group cursor-pointer"
+            style="border-color: #c0c0c0"
+            onclick="openLightbox('https://www.genspark.ai/api/files/s/nqTtPHcA')"
+            data-aos="fade-left"
+          >
+            <img
+              src="https://www.genspark.ai/api/files/s/nqTtPHcA"
+              alt="YouTube Studio Setup"
+              loading="lazy"
+              class="w-full h-80 object-cover group-hover:scale-105 transition duration-500"
+            />
+          </div>
+          <div
+            class="glass-card rounded-2xl overflow-hidden border-2 group cursor-pointer"
+            style="border-color: #b9a779"
+            onclick="openLightbox('https://www.genspark.ai/api/files/s/XIbQb4G7')"
+            data-aos="fade-right"
+          >
+            <img
+              src="https://www.genspark.ai/api/files/s/XIbQb4G7"
+              alt="YouTube Silver Play Button"
+              loading="lazy"
+              class="w-full h-80 object-cover group-hover:scale-105 transition duration-500"
+            />
+          </div>
+        </div>
+
+        <div class="text-center" data-aos="zoom-in">
+          <div class="text-6xl font-black mb-4 counter text-wheat-gold" data-target="300000">0</div>
+          <div class="text-lg text-wheat-light mb-2" data-ar="مشترك" data-en="Subscribers">مشترك</div>
+          <p
+            class="text-lg max-w-3xl mx-auto mb-8 text-gray-300"
+            data-ar="استلام درع اليوتيوب الفضي الرسمي — إنجاز يحتفي بأثر المحتوى التعليمي الذي وصل لمئات الآلاف من الطلاب في المملكة."
+            data-en="Receiving the official YouTube Silver Play Button — a milestone celebrating the impact of educational content that reached hundreds of thousands of students across the Kingdom."
+          >
+            استلام درع اليوتيوب الفضي الرسمي — إنجاز يحتفي بأثر المحتوى التعليمي الذي وصل لمئات الآلاف من الطلاب في
+            المملكة.
+          </p>
+          <a
+            href="https://youtube.com/@reemamnkz"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center gap-3 px-8 py-4 rounded-xl font-bold text-white shadow-lg hover:shadow-2xl transition-all hover:scale-105"
+            style="background: linear-gradient(135deg, #ff0000, #cc0000)"
+          >
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+              />
+            </svg>
+            <span data-ar="زيارة قناتي على يوتيوب" data-en="Visit My YouTube">زيارة قناتي على يوتيوب</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Academic Excellence Certificates -->
+    <section id="academic" class="py-24 bg-charcoal-mid light:bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2
+            class="text-4xl md:text-5xl font-bold mb-4 text-gradient-gold"
+            data-ar="🎓 شهادات التفوق • Academic Excellence"
+            data-en="🎓 Academic Excellence Certificates"
+          >
+            🎓 شهادات التفوق • Academic Excellence
+          </h2>
+          <p
+            class="text-xl text-wheat-light"
+            data-ar="جامعة الملك عبدالعزيز • King Abdulaziz University"
+            data-en="King Abdulaziz University"
+          >
+            جامعة الملك عبدالعزيز • King Abdulaziz University
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Certificate 1: 2023-2024 -->
+          <div class="glass-card rounded-2xl overflow-hidden border-2 border-wheat-gold relative group" data-aos="fade-up">
+            <div
+              class="absolute top-4 right-4 z-10 px-3 py-1 rounded-full text-xs font-bold"
+              style="background: linear-gradient(135deg, #b9a779, #988561); color: #002623"
+            >
+              2024
+            </div>
+            <div class="cursor-pointer overflow-hidden" onclick="openLightbox('https://www.genspark.ai/api/files/s/k5pFPGpo')">
+              <img
+                src="https://www.genspark.ai/api/files/s/k5pFPGpo"
+                alt="Certificate 2023-2024"
+                loading="lazy"
+                class="w-full h-56 object-cover group-hover:scale-110 transition duration-500"
+              />
+            </div>
+            <div class="p-6 text-center">
+              <svg class="w-10 h-10 mx-auto mb-3 text-wheat-gold" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/>
+              </svg>
+              <h4 class="text-xl font-bold mb-2 text-wheat-light" data-ar="شهادة تفوق ٢٠٢٣-٢٠٢٤" data-en="Certificate of Excellence 2023-2024">شهادة تفوق ٢٠٢٣-٢٠٢٤</h4>
+              <p class="text-sm text-gray-300 mb-4" data-ar="السنة التحضيرية — المسار العلمي" data-en="Preparatory Year — Scientific Track">السنة التحضيرية — المسار العلمي</p>
+              <span
+                class="inline-block px-4 py-1 rounded-full text-sm font-bold shadow-lg"
+                style="background: linear-gradient(135deg, #b9a779, #988561); color: #002623; box-shadow: 0 0 15px rgba(185,167,121,0.5)"
+                data-ar="ممتاز ✦ Excellent"
+                data-en="✦ Excellent"
+              >
+                ممتاز ✦ Excellent
+              </span>
+            </div>
+          </div>
+
+          <!-- Certificate 2: 2024-2025 -->
+          <div class="glass-card rounded-2xl overflow-hidden border-2 border-wheat-gold relative group" data-aos="fade-up" data-aos-delay="100">
+            <div
+              class="absolute top-4 right-4 z-10 px-3 py-1 rounded-full text-xs font-bold"
+              style="background: linear-gradient(135deg, #b9a779, #988561); color: #002623"
+            >
+              2025
+            </div>
+            <div class="cursor-pointer overflow-hidden" onclick="openLightbox('https://www.genspark.ai/api/files/s/AiO9BBnD')">
+              <img
+                src="https://www.genspark.ai/api/files/s/AiO9BBnD"
+                alt="Certificate 2024-2025"
+                loading="lazy"
+                class="w-full h-56 object-cover group-hover:scale-110 transition duration-500"
+              />
+            </div>
+            <div class="p-6 text-center">
+              <svg class="w-10 h-10 mx-auto mb-3 text-wheat-gold" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/>
+              </svg>
+              <h4 class="text-xl font-bold mb-2 text-wheat-light" data-ar="شهادة تفوق ٢٠٢٤-٢٠٢٥" data-en="Certificate of Excellence 2024-2025">شهادة تفوق ٢٠٢٤-٢٠٢٥</h4>
+              <p class="text-sm text-gray-300 mb-4" data-ar="كلية الاقتصاد والإدارة" data-en="Economics and Administration">كلية الاقتصاد والإدارة</p>
+              <span
+                class="inline-block px-4 py-1 rounded-full text-sm font-bold shadow-lg"
+                style="background: linear-gradient(135deg, #b9a779, #988561); color: #002623; box-shadow: 0 0 15px rgba(185,167,121,0.5)"
+                data-ar="ممتاز ✦ Excellent"
+                data-en="✦ Excellent"
+              >
+                ممتاز ✦ Excellent
+              </span>
+            </div>
+          </div>
+
+          <!-- Certificate 3: 2025-2026 -->
+          <div class="glass-card rounded-2xl overflow-hidden border-2 border-wheat-gold relative group" data-aos="fade-up" data-aos-delay="200">
+            <div
+              class="absolute top-4 right-4 z-10 px-3 py-1 rounded-full text-xs font-bold"
+              style="background: linear-gradient(135deg, #b9a779, #988561); color: #002623"
+            >
+              2026
+            </div>
+            <div class="cursor-pointer overflow-hidden" onclick="openLightbox('https://www.genspark.ai/api/files/s/W9qtcE2J')">
+              <img
+                src="https://www.genspark.ai/api/files/s/W9qtcE2J"
+                alt="Certificate 2025-2026"
+                loading="lazy"
+                class="w-full h-56 object-cover group-hover:scale-110 transition duration-500"
+              />
+            </div>
+            <div class="p-6 text-center">
+              <svg class="w-10 h-10 mx-auto mb-3 text-wheat-gold" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/>
+              </svg>
+              <h4 class="text-xl font-bold mb-2 text-wheat-light" data-ar="شهادة تفوق ٢٠٢٥-٢٠٢٦" data-en="Certificate of Excellence 2025-2026">شهادة تفوق ٢٠٢٥-٢٠٢٦</h4>
+              <p class="text-sm text-gray-300 mb-4" data-ar="نظم المعلومات الإدارية" data-en="Management Information Systems">نظم المعلومات الإدارية</p>
+              <span
+                class="inline-block px-4 py-1 rounded-full text-sm font-bold shadow-lg"
+                style="background: linear-gradient(135deg, #b9a779, #988561); color: #002623; box-shadow: 0 0 15px rgba(185,167,121,0.5)"
+                data-ar="ممتاز ✦ Excellent"
+                data-en="✦ Excellent"
+              >
+                ممتاز ✦ Excellent
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 z-[100] bg-black/90 items-center justify-center p-4">
+      <button onclick="closeLightbox()" class="absolute top-8 right-8 text-white hover:text-wheat-gold text-5xl z-10">
+        &times;
+      </button>
+      <img
+        id="lightbox-img"
+        src=""
+        alt="Fullscreen Image"
+        class="max-w-full max-h-[90vh] rounded shadow-2xl border border-wheat-gold"
+      />
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 relative bg-forest-deep">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2
+          class="text-4xl md:text-5xl font-bold mb-16 text-center text-gradient-gold"
+          data-ar="تواصل معي • Get In Touch"
+          data-en="Get In Touch"
+        >
+          تواصل معي • Get In Touch
+        </h2>
+
+        <div class="grid lg:grid-cols-2 gap-12">
+          <form
+            class="glass-card p-8 rounded-2xl"
+            data-aos="fade-left"
+            onsubmit="event.preventDefault(); alert(document.documentElement.lang === 'ar' ? 'تم الإرسال بنجاح!' : 'Message Sent Successfully!');"
+          >
+            <div class="mb-6">
+              <label class="block text-sm mb-2 text-wheat-gold" data-ar="الاسم" data-en="Name">الاسم</label>
+              <input type="text" class="w-full bg-black/30 border border-white/20 rounded-lg p-3 text-white focus:border-wheat-gold outline-none transition" required />
+            </div>
+            <div class="mb-6">
+              <label class="block text-sm mb-2 text-wheat-gold" data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني</label>
+              <input type="email" class="w-full bg-black/30 border border-white/20 rounded-lg p-3 text-white focus:border-wheat-gold outline-none transition" required />
+            </div>
+            <div class="mb-6">
+              <label class="block text-sm mb-2 text-wheat-gold" data-ar="الموضوع" data-en="Subject">الموضوع</label>
+              <input type="text" class="w-full bg-black/30 border border-white/20 rounded-lg p-3 text-white focus:border-wheat-gold outline-none transition" />
+            </div>
+            <div class="mb-6">
+              <label class="block text-sm mb-2 text-wheat-gold" data-ar="الرسالة" data-en="Message">الرسالة</label>
+              <textarea rows="4" class="w-full bg-black/30 border border-white/20 rounded-lg p-3 text-white focus:border-wheat-gold outline-none transition" required></textarea>
+            </div>
+            <button
+              type="submit"
+              class="w-full bg-gradient-to-r from-forest-primary to-wheat-gold text-white font-bold py-3 rounded-lg hover:shadow-2xl hover:scale-105 transition-all"
+              data-ar="إرسال الرسالة"
+              data-en="Send Message"
+            >
+              إرسال الرسالة
+            </button>
+          </form>
+
+          <div class="space-y-4 flex flex-col justify-center" data-aos="fade-right">
+            <a href="/cdn-cgi/l/email-protection#f5969a9b81949681b58790909894989a9b9e9c908fdb969a98" class="glass-card p-5 rounded-xl flex items-center justify-between hover:border-wheat-gold hover:scale-105 transition-all">
+              <span class="font-bold text-lg" data-ar="📧 البريد الإلكتروني" data-en="📧 Email Me">📧 البريد الإلكتروني</span>
+              <span class="text-wheat-gold text-sm"><span class="__cf_email__" data-cfemail="2c4f4342584d4f586c5e4949414d41434247454956024f4341">[email&#160;protected]</span></span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/reema-monkiez-699b55324/"
+              target="_blank"
+              rel="noopener"
+              class="glass-card p-5 rounded-xl flex items-center justify-between hover:border-wheat-gold hover:scale-105 transition-all"
+            >
+              <span class="font-bold text-lg" data-ar="💼 لينكد إن" data-en="💼 LinkedIn">💼 لينكد إن</span>
+              <span class="text-wheat-gold text-sm">Reema Monkiez</span>
+            </a>
+            <a
+              href="https://www.tiktok.com/@reemamnkz"
+              target="_blank"
+              rel="noopener"
+              class="glass-card p-5 rounded-xl flex items-center justify-between hover:border-wheat-gold hover:scale-105 transition-all"
+            >
+              <span class="font-bold text-lg" data-ar="🎵 تيك توك" data-en="🎵 TikTok">🎵 تيك توك</span>
+              <span class="text-wheat-gold text-sm">@reemamnkz</span>
+            </a>
+            <a
+              href="https://youtube.com/@reemamnkz"
+              target="_blank"
+              rel="noopener"
+              class="glass-card p-5 rounded-xl flex items-center justify-between hover:border-wheat-gold hover:scale-105 transition-all"
+            >
+              <span class="font-bold text-lg" data-ar="▶️ يوتيوب" data-en="▶️ YouTube">▶️ يوتيوب</span>
+              <span class="text-wheat-gold text-sm">@reemamnkz</span>
+            </a>
+            <a
+              href="https://x.com/reemamnkz"
+              target="_blank"
+              rel="noopener"
+              class="glass-card p-5 rounded-xl flex items-center justify-between hover:border-wheat-gold hover:scale-105 transition-all"
+            >
+              <span class="font-bold text-lg" data-ar="✕ منصة إكس" data-en="✕ X Platform">✕ منصة إكس</span>
+              <span class="text-wheat-gold text-sm">@reemamnkz</span>
+            </a>
+            <a
+              href="#"
+              class="p-5 rounded-xl flex items-center justify-between hover:scale-105 transition-all font-bold"
+              style="background: linear-gradient(135deg, #b9a779, #988561); color: #002623"
+            >
+              <span class="text-lg" data-ar="⬇ تحميل السيرة الذاتية" data-en="⬇ Download CV">⬇ تحميل السيرة الذاتية</span>
+              <span class="text-2xl">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-forest-deep border-t-2 border-wheat-gold py-12">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+        <img
+          src="https://www.genspark.ai/api/files/s/2zMiJSA3"
+          alt="Reema Monkiez Logo"
+          loading="lazy"
+          class="w-20 h-20 rounded-full mx-auto mb-6 border-2 border-wheat-gold shadow-[0_0_30px_rgba(185,167,121,0.4)]"
+        />
+        <h3 class="text-3xl font-bold text-gradient-gold mb-2" data-ar="ريما منقذ" data-en="Reema Monkiez">ريما منقذ</h3>
+        <p
+          class="text-wheat-light mb-8 italic"
+          data-ar="صياغة التميز الإبداعي السوري الحديث"
+          data-en="Crafting modern Syrian creative excellence"
+        >
+          صياغة التميز الإبداعي السوري الحديث
+        </p>
+
+        <div class="flex justify-center gap-6 mb-8">
+          <a href="https://www.linkedin.com/in/reema-monkiez-699b55324/" target="_blank" rel="noopener" class="text-wheat-gold hover:text-wheat-light transition text-2xl">in</a>
+          <a href="https://www.tiktok.com/@reemamnkz" target="_blank" rel="noopener" class="text-wheat-gold hover:text-wheat-light transition text-2xl">♪</a>
+          <a href="https://youtube.com/@reemamnkz" target="_blank" rel="noopener" class="text-wheat-gold hover:text-wheat-light transition text-2xl">▶</a>
+          <a href="https://x.com/reemamnkz" target="_blank" rel="noopener" class="text-wheat-gold hover:text-wheat-light transition text-2xl">✕</a>
+        </div>
+
+        <div class="flex justify-center gap-2 items-center mb-4 text-sm text-gray-400">
+          <span data-ar="صنع بحب في" data-en="Made with love in">صنع بحب في</span>
+          <svg viewBox="0 0 900 600" class="w-7 h-5 mx-1 border border-white/20 rounded shadow">
+            <rect width="900" height="200" fill="#007A3D" />
+            <rect y="200" width="900" height="200" fill="#FFFFFF" />
+            <rect y="400" width="900" height="200" fill="#000000" />
+            <path fill="#CE1126" d="M 250,230 L 270,290 L 330,290 L 280,330 L 300,390 L 250,350 L 200,390 L 220,330 L 170,290 L 230,290 Z" />
+            <path fill="#CE1126" d="M 450,230 L 470,290 L 530,290 L 480,330 L 500,390 L 450,350 L 400,390 L 420,330 L 370,290 L 430,290 Z" />
+            <path fill="#CE1126" d="M 650,230 L 670,290 L 730,290 L 680,330 L 700,390 L 650,350 L 600,390 L 620,330 L 570,290 L 630,290 Z" />
+          </svg>
+          <span data-ar="سوريا والمملكة العربية السعودية" data-en="Syria & Saudi Arabia">سوريا والمملكة العربية السعودية</span>
+        </div>
+
+        <p class="text-gray-500 text-sm">© 2026 Reema Monkiez. Crafted with Syrian pride. 🤍</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      // AOS Init
+      AOS.init({ duration: 1000, once: true, offset: 50 });
+
+      // Scroll Progress
+      window.addEventListener('scroll', () => {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        const sp = document.getElementById('scroll-progress');
+        if (sp) sp.style.width = scrolled + '%';
+      });
+
+      // Language Toggle
+      function toggleLang() {
+        const html = document.documentElement;
+        const isAr = html.lang === 'ar';
+        html.lang = isAr ? 'en' : 'ar';
+        html.dir = isAr ? 'ltr' : 'rtl';
+        const btn = document.getElementById('lang-btn');
+        if (btn) btn.innerText = isAr ? 'AR' : 'EN';
+
+        document.querySelectorAll('[data-ar]').forEach((el) => {
+          const text = isAr ? el.getAttribute('data-en') : el.getAttribute('data-ar');
+          // Preserve child elements: only update text nodes if element has no element children
+          if (el.children.length === 0) {
+            el.innerText = text;
+          } else {
+            // For elements with nested spans, just update first text node
+            const firstTextNode = Array.from(el.childNodes).find(n => n.nodeType === 3);
+            if (firstTextNode) firstTextNode.nodeValue = text;
+          }
+        });
+      }
+
+      // Theme Toggle
+      function toggleTheme() {
+        document.documentElement.classList.toggle('light');
+        document.documentElement.classList.toggle('dark');
+      }
+
+      // Lightbox
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+
+      function openLightbox(src) {
+        lightboxImg.src = src;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = 'auto';
+        setTimeout(() => (lightboxImg.src = ''), 300);
+      }
+
+      if (lightbox) {
+        lightbox.addEventListener('click', (e) => {
+          if (e.target === lightbox) closeLightbox();
+        });
+      }
+
+      // Intersection Observer for Counters & Skill Bars
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              if (entry.target.classList.contains('counter') && !entry.target.classList.contains('counted')) {
+                const target = +entry.target.getAttribute('data-target');
+                let count = 0;
+                const increment = target / 100;
+                const updateCount = () => {
+                  if (count < target) {
+                    count += increment;
+                    entry.target.innerText = Math.ceil(count).toLocaleString();
+                    setTimeout(updateCount, 20);
+                  } else {
+                    entry.target.innerText = target.toLocaleString() + '+';
+                  }
+                };
+                updateCount();
+                entry.target.classList.add('counted');
+              }
+              if (entry.target.classList.contains('skill-bar-fill')) {
+                entry.target.style.width = entry.target.getAttribute('data-width');
+              }
+            }
+          });
+        },
+        { threshold: 0.3 },
+      );
+
+      document.querySelectorAll('.counter, .skill-bar-fill').forEach((el) => observer.observe(el));
+    </script>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
